@@ -1,0 +1,38 @@
+.service {
+    padding: 100px 0;
+
+    .items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .item {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: grid;
+            gap: 10px;
+            transition: all 0.3s ease;
+
+            .icon {
+                color: #1e5feb;
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            .content {
+                line-height: 1.5;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}
