@@ -4,11 +4,77 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lovetech | Contact</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
         <link rel="stylesheet" href="./css/contact.css" />
     </head>
     <body>
         <div id="header-container"></div>
         <div id="banner-container"></div>
+        <div class="contact-form">
+            <div class="container">
+                <div class="contact-wrap">
+                    <div class="information">
+                        <h2 class="title">聯絡資訊</h2>
+                        <div class="information-wrap">
+                            <div class="item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3 class="subtitle">地址</h3>
+                                <div class="content">
+                                    台中市-北屯區北屯路366號7F-1
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h3 class="subtitle">電話</h3>
+                                <div class="content">04-2243-4288</div>
+                            </div>
+                            <div class="item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3 class="subtitle">電子郵件</h3>
+                                <div class="content">service@lovetech.tw</div>
+                            </div>
+                        </div>
+                    </div>
+                    <form
+                        class="send-form"
+                        action="https://book.niceinfos.com/api/form/index.php"
+                        method="POST"
+                    >
+                        <h2 class="title">發送訊息</h2>
+                        <div class="input-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" />
+                        </div>
+                        <div class="input-group">
+                            <label for="email">電子郵件</label>
+                            <input type="text" id="email" name="email" />
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">主旨</label>
+                            <input type="text" id="subject" name="subject" />
+                        </div>
+                        <div class="input-group">
+                            <label for="message">訊息內容</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="send-btn">
+                                送出訊息
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <main style="min-height: 100vh"></main>
         <div id="footer-container"></div>
     </body>
