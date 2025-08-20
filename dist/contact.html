@@ -44,39 +44,66 @@
                             </div>
                         </div>
                     </div>
-                    <form
-                        class="send-form"
-                        action="https://book.niceinfos.com/api/form/index.php"
-                        method="POST"
-                    >
-                        <h2 class="title">發送訊息</h2>
-                        <div class="input-group">
-                            <label for="name">姓名</label>
-                            <input type="text" id="name" name="name" />
-                        </div>
-                        <div class="input-group">
-                            <label for="email">電子郵件</label>
-                            <input type="text" id="email" name="email" />
-                        </div>
-                        <div class="input-group">
-                            <label for="subject">主旨</label>
-                            <input type="text" id="subject" name="subject" />
-                        </div>
-                        <div class="input-group">
-                            <label for="message">訊息內容</label>
-                            <textarea id="message" name="message"></textarea>
-                        </div>
-                        <div class="btn-group">
-                            <button type="submit" class="send-btn">
-                                送出訊息
-                            </button>
-                        </div>
-                    </form>
+                    <div id="form-app">
+                        <form
+                            class="send-form"
+                            action="https://book.niceinfos.com/api/form/index.php"
+                            method="POST"
+                            @submit.prevent="doSend"
+                        >
+                            <h2 class="title">發送訊息</h2>
+                            <div class="input-group">
+                                <label for="name">姓名</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    v-model="formData.name"
+                                    ref="name"
+                                />
+                            </div>
+                            <div class="input-group">
+                                <label for="email">電子郵件</label>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    v-model="formData.email"
+                                    ref="email"
+                                />
+                            </div>
+                            <div class="input-group">
+                                <label for="subject">主旨</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    v-model="formData.subject"
+                                    ref="subject"
+                                />
+                            </div>
+                            <div class="input-group">
+                                <label for="message">訊息內容</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    v-model="formData.message"
+                                    ref="message"
+                                ></textarea>
+                            </div>
+                            <div class="btn-group">
+                                <button type="submit" class="send-btn">
+                                    送出訊息
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
         <main style="min-height: 100vh"></main>
         <div id="footer-container"></div>
     </body>
+    <script src="js/lib/vue.global.prod.js"></script>
     <script type="module" src="js/contact.js"></script>
 </html>
