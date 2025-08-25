@@ -177,4 +177,33 @@ ul {
   background-color: #f5f5f5;
   border-radius: 10px;
   line-height: 2;
+}
+
+.core-value {
+  padding: 80px 0;
+}
+.core-value .item-wrap {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.core-value .item-wrap .item {
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.core-value .item-wrap .item .icon {
+  font-size: 2rem;
+  color: #283adf;
+}
+.core-value .item-wrap .item .content {
+  text-align: center;
+  line-height: 1.5;
 }/*# sourceMappingURL=about-us.css.map */
