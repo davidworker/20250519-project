@@ -1,0 +1,17 @@
+@import "variable";
+
+.partner-banner {
+    padding-top: var(--header-height);
+    height: 360px;
+    background-color: #1a4cb8e6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
