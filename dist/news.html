@@ -15,73 +15,54 @@
         <div class="news-banner">
             <h1 class="title">最新消息</h1>
         </div>
-        <div class="news-items">
-            <div class="container">
-                <div class="item-wrap">
-                    <div class="item">
-                        <div class="date">2025-01-01</div>
-                        <h2 class="title">最新消息</h2>
-                        <div class="content">最新消息 CONTENT</div>
-                        <div class="btn-wrap">
-                            <a href="#" class="btn"
-                                >閱讀更多 <i class="fas fa-arrow-right"></i
-                            ></a>
-                        </div>
+        <div id="news-app">
+            <div class="news-items">
+                <div class="container">
+                    <div class="item-wrap">
+                        <template
+                            v-for="item in getWithPaginate()"
+                            :key="item.id"
+                        >
+                            <div class="item">
+                                <div class="date">{{ item.date }}</div>
+                                <h2 class="title">{{ item.title }}</h2>
+                                <div class="content">{{ item.content }}</div>
+                                <div class="btn-wrap">
+                                    <a href="#" class="btn"
+                                        >閱讀更多
+                                        <i class="fas fa-arrow-right"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </template>
                     </div>
-                    <div class="item">
-                        <div class="date">2025-01-01</div>
-                        <h2 class="title">最新消息</h2>
-                        <div class="content">最新消息 CONTENT</div>
-                        <div class="btn-wrap">
-                            <a href="#" class="btn"
-                                >閱讀更多 <i class="fas fa-arrow-right"></i
-                            ></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="date">2025-01-01</div>
-                        <h2 class="title">最新消息</h2>
-                        <div class="content">最新消息 CONTENT</div>
-                        <div class="btn-wrap">
-                            <a href="#" class="btn"
-                                >閱讀更多 <i class="fas fa-arrow-right"></i
-                            ></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="date">2025-01-01</div>
-                        <h2 class="title">最新消息</h2>
-                        <div class="content">最新消息 CONTENT</div>
-                        <div class="btn-wrap">
-                            <a href="#" class="btn"
-                                >閱讀更多 <i class="fas fa-arrow-right"></i
-                            ></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="date">2025-01-01</div>
-                        <h2 class="title">最新消息</h2>
-                        <div class="content">最新消息 CONTENT</div>
-                        <div class="btn-wrap">
-                            <a href="#" class="btn"
-                                >閱讀更多 <i class="fas fa-arrow-right"></i
-                            ></a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="date">2025-01-01</div>
-                        <h2 class="title">最新消息</h2>
-                        <div class="content">最新消息 CONTENT</div>
-                        <div class="btn-wrap">
-                            <a href="#" class="btn"
-                                >閱讀更多 <i class="fas fa-arrow-right"></i
-                            ></a>
-                        </div>
+                </div>
+            </div>
+
+            <div class="news-paginate">
+                <div class="container">
+                    <div class="paginate-wrap">
+                        <a href="#" class="btn" @click.prevent="prevPage"
+                            ><i class="fas fa-angle-left"></i
+                        ></a>
+                        <template v-for="i in totalPage()" :key="i">
+                            <a
+                                href="#"
+                                class="btn"
+                                :class="{ active: page === i }"
+                                @click.prevent="page = i"
+                                >{{ i }}</a
+                            >
+                        </template>
+                        <a href="#" class="btn" @click.prevent="nextPage"
+                            ><i class="fas fa-angle-right"></i
+                        ></a>
                     </div>
                 </div>
             </div>
         </div>
         <div id="footer-container"></div>
     </body>
+    <script src="./js/lib/vue.global.prod.js"></script>
     <script type="module" src="js/news.js"></script>
 </html>

@@ -32,3 +32,33 @@
         }
     }
 }
+
+.news-paginate {
+    padding: 40px 0;
+
+    .paginate-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #bbbbbb;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            font-size: 1.1rem;
+
+            &:hover,
+            &.active {
+                background-color: #2472d8;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -161,4 +161,30 @@ ul {
 .news-items .item-wrap .item .btn-wrap .btn {
   color: #2472d8;
   font-weight: 700;
+}
+
+.news-paginate {
+  padding: 40px 0;
+}
+.news-paginate .paginate-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.news-paginate .paginate-wrap .btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #bbbbbb;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.news-paginate .paginate-wrap .btn:hover, .news-paginate .paginate-wrap .btn.active {
+  background-color: #2472d8;
+  color: #fff;
 }/*# sourceMappingURL=news.css.map */
