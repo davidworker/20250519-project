@@ -1,3 +1,51 @@
 @import "reset";
 @import "components/project";
 @import "components/about-us-banner";
+
+.timeline {
+    padding: 80px 0;
+    background-color: #fff;
+
+    .timeline-wrap {
+        display: grid;
+        gap: 40px;
+
+        .item {
+            display: grid;
+            gap: 20px;
+
+            .title {
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 700;
+                color: #3926dd;
+                padding-bottom: 15px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100px;
+                    height: 4px;
+                    background-color: #3926dd;
+                    border-radius: 9999px;
+                }
+            }
+
+            .content-wrap {
+                width: 70%;
+                margin: 0 auto;
+
+                .content {
+                    padding: 40px;
+                    background-color: #f5f5f5;
+                    border-radius: 10px;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
